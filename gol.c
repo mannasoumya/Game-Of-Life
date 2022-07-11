@@ -8,8 +8,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define ROWS 10
-#define COLS 10
+#define SCALE 2
+#define ROWS 10 * SCALE
+#define COLS 10 * SCALE
 int ARR[ROWS][COLS];
 
 void display_2d_arr(int arr[ROWS][COLS]);
@@ -58,6 +59,8 @@ int main(int argc, char *argv[])
             }
         }
     }
+	//clrscr();
+	printf("\e[1;1H\e[2J");
     display_2d_arr(ARR);
 
     // for (int i = 0; i < ROWS; i++)
@@ -73,6 +76,7 @@ int main(int argc, char *argv[])
     {
         printf("\nSimulation Number : %d\n", (c + 1));
         start_simulation();
+		printf("\e[1;1H\e[2J");
         display_2d_arr(ARR);
     }
     return 0;
@@ -84,7 +88,9 @@ void display_2d_arr(int arr[ROWS][COLS])
     {
         for (int j = 0; j < COLS; j++)
         {
-            printf("%d ", arr[i][j]);
+            if (arr[i][j] == 1) printf(" # ");
+			if (arr[i][j] == 0) printf("   ");
+			//printf("%d ", arr[i][j]);
         }
         printf("\n");
     }
@@ -131,7 +137,8 @@ int count_live_neighbors(int arr[ROWS][COLS], int x, int y)
 
 void start_simulation()
 {
-    sleep(1);
+	usleep(200*1000);
+    //sleep(1);
     printf("\n\n");
     for (int i = 0; i < ROWS; i++)
     {
