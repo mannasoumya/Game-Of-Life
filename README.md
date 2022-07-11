@@ -11,7 +11,27 @@ Find more details at <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
 > ./gol
 Too Few args....
  Usage: <executable> 'number of simulations(integer)'
-> ./gol 20
+> ./gol 150
+                  #     #  #                               
+                   #  #                                     
+             #     #                                        
+          #  #     #           #  #     #     #     #  #    
+ #  #        #     #        #     #     #        #     #    
+    #     #        #  #     #     #                         
+    #     #        #        #                               
+ #  #     #     #     #  #     #                            
+    #        #  #              #  #                         
+ #  #  #        #     #              #              #  #  # 
+          #  #     #     #     #  #  #  #  #  #  #        # 
+ #  #     #        #     #     #                          # 
+ #     #     #     #        #     #  #  #     #  #  #  #    
+          #  #        #     #     #                         
+                   #  #     #     #                 #  #    
+                            #     #  #  #  #  #  #     #    
+                   #  #     #                               
+                   #        #                               
+                      #        #        #  #                
+                         #  #  #        #  #                
 ```
 
 ## TODO 
